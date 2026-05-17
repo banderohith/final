@@ -7,7 +7,22 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     @GetMapping("/")
-    public String hello() {
-        return "DevOps Project Running Successfully!";
+    public String home() {
+        return "Home Page Running Successfully!";
+    }
+
+    @GetMapping("/about-devops")
+    public String devops() {
+        return "DevOps Microservice Running!";
+    }
+
+    @GetMapping("/about-aws")
+    public String aws() {
+        return "AWS Microservice Running!";
+    }
+
+    @GetMapping("/about-kubernetes")
+    public String kubernetes() {
+        return "Kubernetes Microservice Running!";
     }
 }
