@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: final-app
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: final-app
+
+  template:
+    metadata:
+      labels:
+        app: final-app
+
+    spec:
+      containers:
+      - name: final-app
+
+        image: 489493637033.dkr.ecr.ap-south-1.amazonaws.com/finalpraa:latest
+
+        ports:
+        - containerPort: 8085
